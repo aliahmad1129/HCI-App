@@ -54,14 +54,14 @@ export const ProfileSetupPage: React.FC = () => {
   const isFormValid = selectedInterests.length >= 3;
 
   return (
-    <div className="relative min-h-screen w-full flex items-center justify-center bg-[#0b0b0b] overflow-hidden p-[20px]">
+    <div className="relative min-h-dvh w-full flex items-center justify-center bg-[#0b0b0b] overflow-x-hidden overflow-y-auto p-[12px] sm:p-[20px]">
       <img
         src={bgPattern}
         alt="Background pattern"
         className="absolute inset-0 size-full object-cover pointer-events-none opacity-40 select-none"
       />
 
-      <div className="relative z-10 w-full flex justify-center">
+      <div className="relative z-10 w-full flex justify-center py-[12px] sm:py-0">
         <ModalContainer title="Complete your profile" stepNumber="02" widthClass="w-[540px]">
           <div className="flex flex-col w-full">
             <input
@@ -73,8 +73,8 @@ export const ProfileSetupPage: React.FC = () => {
             />
 
             {/* Profile Image Section */}
-            <div className="flex gap-[16px] items-center p-[24px] border-b border-[rgba(255,255,255,0.06)]">
-              <div className="relative size-[108px] rounded-[8px] overflow-hidden bg-[rgba(255,255,255,0.04)] border border-[rgba(255,255,255,0.12)] shrink-0 flex items-center justify-center">
+            <div className="flex gap-[12px] sm:gap-[16px] items-center p-[16px] sm:p-[24px] border-b border-[rgba(255,255,255,0.06)]">
+              <div className="relative size-[76px] sm:size-[108px] rounded-[8px] overflow-hidden bg-[rgba(255,255,255,0.04)] border border-[rgba(255,255,255,0.12)] shrink-0 flex items-center justify-center">
                 <img
                   src={profileImage}
                   alt="Profile Avatar"
@@ -82,8 +82,8 @@ export const ProfileSetupPage: React.FC = () => {
                 />
               </div>
 
-              <div className="flex flex-col gap-[12px] items-start justify-center flex-1">
-                <p className="font-ibm font-medium text-[16px] text-[rgba(255,255,255,0.8)] tracking-[-0.54px] uppercase leading-[1.32]">
+              <div className="flex flex-col gap-[10px] sm:gap-[12px] items-start justify-center flex-1 min-w-0">
+                <p className="font-ibm font-medium text-[13px] sm:text-[16px] text-[rgba(255,255,255,0.8)] tracking-[-0.4px] sm:tracking-[-0.54px] uppercase leading-[1.32]">
                   <span className="text-[#d11c1c]">// </span>
                   <span>please upload image to complete profile</span>
                 </p>
@@ -99,9 +99,9 @@ export const ProfileSetupPage: React.FC = () => {
             </div>
 
             {/* Interests Section */}
-            <div className="flex flex-col gap-[16px] px-[24px] py-[24px]">
-              <div className="flex items-center justify-between">
-                <p className="font-ibm font-medium text-[16px] text-[rgba(255,255,255,0.8)] tracking-[-0.54px] uppercase">
+            <div className="flex flex-col gap-[16px] px-[16px] sm:px-[24px] py-[18px] sm:py-[24px]">
+              <div className="flex flex-wrap items-center justify-between gap-[8px]">
+                <p className="font-ibm font-medium text-[13px] sm:text-[16px] text-[rgba(255,255,255,0.8)] tracking-[-0.4px] sm:tracking-[-0.54px] uppercase">
                   <span className="text-[#d11c1c]">// </span>
                   <span>please choose 3 interests minimum</span>
                 </p>
@@ -112,7 +112,7 @@ export const ProfileSetupPage: React.FC = () => {
               </div>
 
               {/* 3 Column Grid */}
-              <div className="grid grid-cols-3 gap-x-[12px] gap-y-[14px]">
+              <div className="grid grid-cols-2 sm:grid-cols-3 gap-x-[8px] sm:gap-x-[12px] gap-y-[12px] sm:gap-y-[14px]">
                 {ALL_INTERESTS.map((interest) => (
                   <Checkbox
                     key={interest}
@@ -125,7 +125,7 @@ export const ProfileSetupPage: React.FC = () => {
             </div>
 
             {/* Buttons Row */}
-            <div className="flex items-center justify-end gap-[12px] px-[24px] py-[20px] bg-[rgba(255,255,255,0.02)] border-t border-[rgba(255,255,255,0.06)]">
+            <div className="flex items-center justify-end gap-[8px] sm:gap-[12px] px-[16px] sm:px-[24px] py-[14px] sm:py-[20px] bg-[rgba(255,255,255,0.02)] border-t border-[rgba(255,255,255,0.06)]">
               <Button
                 type="button"
                 variant="secondary"

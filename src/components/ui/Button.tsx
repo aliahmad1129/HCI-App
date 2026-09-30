@@ -17,7 +17,7 @@ export const Button: React.FC<ButtonProps> = ({
   ...props
 }) => {
   let baseStyles =
-    'inline-flex items-center justify-center font-geist font-medium text-[20px] uppercase transition-all duration-200 focus:outline-none shrink-0 cursor-pointer select-none';
+    'inline-flex min-h-[44px] items-center justify-center font-geist font-medium text-[16px] sm:text-[20px] uppercase transition-all duration-200 focus:outline-none shrink-0 cursor-pointer select-none';
 
   let variantStyles = '';
 

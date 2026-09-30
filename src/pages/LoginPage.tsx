@@ -29,18 +29,18 @@ export const LoginPage: React.FC = () => {
   };
 
   return (
-    <div className="relative min-h-screen w-full flex items-center justify-center bg-[#0b0b0b] overflow-hidden p-[20px]">
+    <div className="relative min-h-dvh w-full flex items-center justify-center bg-[#0b0b0b] overflow-x-hidden overflow-y-auto p-[12px] sm:p-[20px]">
       <img
         src={bgPattern}
         alt="Background pattern"
         className="absolute inset-0 size-full object-cover pointer-events-none opacity-40 select-none"
       />
 
-      <div className="relative z-10 w-full flex justify-center">
+      <div className="relative z-10 w-full flex justify-center py-[12px] sm:py-0">
         <ModalContainer title="Enter Email & Password" stepNumber="01" widthClass="w-[540px]">
           <form onSubmit={handleNext} className="flex flex-col w-full">
             {/* Field 1: Email */}
-            <div className="flex flex-col gap-[12px] pt-[24px] pb-[12px] px-[24px] border-b border-[rgba(255,255,255,0.06)]">
+            <div className="flex flex-col gap-[12px] pt-[18px] sm:pt-[24px] pb-[12px] px-[16px] sm:px-[24px] border-b border-[rgba(255,255,255,0.06)]">
               <Input
                 label="EMAIL"
                 type="email"
@@ -54,7 +54,7 @@ export const LoginPage: React.FC = () => {
             </div>
 
             {/* Field 2: Password with Eye Toggle */}
-            <div className="flex flex-col gap-[12px] py-[12px] px-[24px] border-b border-[rgba(255,255,255,0.06)]">
+            <div className="flex flex-col gap-[12px] py-[12px] px-[16px] sm:px-[24px] border-b border-[rgba(255,255,255,0.06)]">
               <Input
                 label="PASSWORD"
                 type={showPassword ? 'text' : 'password'}
@@ -89,7 +89,7 @@ export const LoginPage: React.FC = () => {
             </div>
 
             {/* Terms Checkbox */}
-            <div className="flex items-center gap-[16px] px-[24px] py-[16px]">
+            <div className="flex items-center gap-[12px] px-[16px] sm:px-[24px] py-[16px]">
               <Checkbox
                 checked={state.login.acceptedTerms}
                 onChange={(checked) => setLoginData({ acceptedTerms: checked })}
@@ -102,7 +102,7 @@ export const LoginPage: React.FC = () => {
             </div>
 
             {/* Buttons Row */}
-            <div className="flex items-center justify-end gap-[12px] px-[24px] py-[20px] bg-[rgba(255,255,255,0.02)] border-t border-[rgba(255,255,255,0.06)]">
+            <div className="flex items-center justify-end gap-[8px] sm:gap-[12px] px-[16px] sm:px-[24px] py-[14px] sm:py-[20px] bg-[rgba(255,255,255,0.02)] border-t border-[rgba(255,255,255,0.06)]">
               <Button
                 type="button"
                 variant="secondary"

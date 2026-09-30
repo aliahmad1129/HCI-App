@@ -28,14 +28,14 @@ export const BoatSelectionPage: React.FC = () => {
   };
 
   return (
-    <div className="relative min-h-screen w-full flex items-center justify-center bg-[#0b0b0b] overflow-hidden p-[20px]">
+    <div className="relative min-h-dvh w-full flex items-center justify-center bg-[#0b0b0b] overflow-x-hidden overflow-y-auto p-[12px] sm:p-[20px]">
       <img
         src={bgPattern}
         alt="Background pattern"
         className="absolute inset-0 size-full object-cover pointer-events-none opacity-40 select-none"
       />
 
-      <div className="relative z-10 w-full flex justify-center">
+      <div className="relative z-10 w-full flex justify-center py-[12px] sm:py-0">
         <ModalContainer
           title="Almost there! We need to verify that you are human."
           stepNumber="04"
@@ -43,15 +43,15 @@ export const BoatSelectionPage: React.FC = () => {
         >
           <div className="flex flex-col w-full">
             {/* Header prompt */}
-            <div className="flex flex-col gap-[16px] pb-[12px] pt-[24px] px-[24px]">
-              <p className="font-ibm font-medium text-[18px] md:text-[20px] tracking-[-0.6px] uppercase leading-none">
+            <div className="flex flex-col gap-[14px] sm:gap-[16px] pb-[12px] pt-[18px] sm:pt-[24px] px-[16px] sm:px-[24px]">
+              <p className="font-ibm font-medium text-[14px] sm:text-[18px] md:text-[20px] tracking-[-0.4px] sm:tracking-[-0.6px] uppercase leading-tight">
                 <span className="text-[#d11c1c]">// </span>
                 <span className="text-[rgba(255,255,255,0.4)]">select all images with</span>
                 <span className="text-white font-bold"> boat</span>
               </p>
 
               {/* 3x3 Image Grid Container */}
-              <div className="bg-white p-[4px] gap-[4px] grid grid-cols-3 grid-rows-3 h-[320px] rounded-[4px] overflow-hidden">
+              <div className="bg-white p-[4px] gap-[4px] grid grid-cols-3 grid-rows-3 aspect-square w-full rounded-[4px] overflow-hidden">
                 {BOAT_IMAGES.map((item) => {
                   const isSelected = selectedIndexes.includes(item.id);
                   return (
@@ -79,7 +79,7 @@ export const BoatSelectionPage: React.FC = () => {
 
                       {/* Bottom Left Checkbox Badge */}
                       <div
-                        className={`absolute bottom-[8px] left-[8px] size-[18px] rounded-[2.37px] border flex items-center justify-center transition-all ${
+                        className={`absolute bottom-[5px] left-[5px] sm:bottom-[8px] sm:left-[8px] size-[16px] sm:size-[18px] rounded-[2.37px] border flex items-center justify-center transition-all ${
                           isSelected
                             ? 'bg-[#d11c1c] border-[#d11c1c]'
                             : 'bg-black/40 backdrop-blur-[2px] border-black/64 group-hover:border-white/60'
@@ -113,7 +113,7 @@ export const BoatSelectionPage: React.FC = () => {
             </div>
 
             {/* Buttons Row */}
-            <div className="flex items-center justify-end gap-[12px] px-[24px] py-[20px] bg-[rgba(255,255,255,0.02)] border-t border-[rgba(255,255,255,0.06)] mt-[8px]">
+            <div className="flex items-center justify-end gap-[8px] sm:gap-[12px] px-[16px] sm:px-[24px] py-[14px] sm:py-[20px] bg-[rgba(255,255,255,0.02)] border-t border-[rgba(255,255,255,0.06)] mt-[8px]">
               <Button
                 type="button"
                 variant="secondary"

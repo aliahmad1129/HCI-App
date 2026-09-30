@@ -29,20 +29,20 @@ export const PersonalDetailsPage: React.FC = () => {
   };
 
   return (
-    <div className="relative min-h-screen w-full flex items-center justify-center bg-[#0b0b0b] overflow-hidden p-[20px]">
+    <div className="relative min-h-dvh w-full flex items-center justify-center bg-[#0b0b0b] overflow-x-hidden overflow-y-auto p-[12px] sm:p-[20px]">
       <img
         src={bgPattern}
         alt="Background pattern"
         className="absolute inset-0 size-full object-cover pointer-events-none opacity-40 select-none"
       />
 
-      <div className="relative z-10 w-full flex justify-center">
+      <div className="relative z-10 w-full flex justify-center py-[12px] sm:py-0">
         <ModalContainer title="Please enter your Personal Details" stepNumber="03" widthClass="w-[664px]">
           <form onSubmit={handleNext} className="flex flex-col w-full">
             {/* 2 Column Layout Grid */}
-            <div className="flex flex-col p-[24px] gap-[20px]">
+            <div className="flex flex-col p-[16px] sm:p-[24px] gap-[18px] sm:gap-[20px]">
               {/* Row 1: Name & Gender */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-[20px]">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-[16px] sm:gap-[20px]">
                 <Input
                   label="NAME"
                   placeholder="e.g: Ali"
@@ -86,7 +86,7 @@ export const PersonalDetailsPage: React.FC = () => {
               </div>
 
               {/* Row 2: DOB & Blood Group */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-[20px]">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-[16px] sm:gap-[20px]">
                 <DatePicker
                   label="DOB"
                   placeholder="DD-MM-YYYY"
@@ -109,7 +109,7 @@ export const PersonalDetailsPage: React.FC = () => {
               </div>
 
               {/* Row 3: Country & Address */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-[20px]">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-[16px] sm:gap-[20px]">
                 <SearchableSelect
                   label="COUNTRY"
                   placeholder="e.g: Pakistan"
@@ -128,7 +128,7 @@ export const PersonalDetailsPage: React.FC = () => {
             </div>
 
             {/* Buttons Row */}
-            <div className="flex items-center justify-end gap-[12px] px-[24px] py-[20px] bg-[rgba(255,255,255,0.02)] border-t border-[rgba(255,255,255,0.06)]">
+            <div className="flex items-center justify-end gap-[8px] sm:gap-[12px] px-[16px] sm:px-[24px] py-[14px] sm:py-[20px] bg-[rgba(255,255,255,0.02)] border-t border-[rgba(255,255,255,0.06)]">
               <Button
                 type="button"
                 variant="secondary"

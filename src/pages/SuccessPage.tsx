@@ -15,19 +15,19 @@ export const SuccessPage: React.FC = () => {
   };
 
   return (
-    <div className="relative min-h-screen w-full flex items-center justify-center bg-[#0b0b0b] overflow-hidden p-[20px]">
+    <div className="relative min-h-dvh w-full flex items-center justify-center bg-[#0b0b0b] overflow-x-hidden overflow-y-auto p-[12px] sm:p-[20px]">
       <img
         src={bgPattern}
         alt="Background pattern"
         className="absolute inset-0 size-full object-cover pointer-events-none opacity-40 select-none"
       />
 
-      <div className="relative z-10 w-full flex justify-center animate-fadeIn">
+      <div className="relative z-10 w-full flex justify-center animate-fadeIn py-[12px] sm:py-0">
         {/* Modal Container */}
-        <div className="bg-[#181818] border border-[rgba(255,255,255,0.08)] rounded-[12px] p-[20px] shadow-[0px_294px_82px_0px_rgba(0,0,0,0.01),0px_188px_75px_0px_rgba(0,0,0,0.06),0px_106px_63px_0px_rgba(0,0,0,0.21),0px_47px_47px_0px_rgba(0,0,0,0.35),0px_12px_26px_0px_rgba(0,0,0,0.4)] flex flex-col gap-[24px] items-center w-[500px] max-w-full">
+        <div className="bg-[#181818] border border-[rgba(255,255,255,0.08)] rounded-[12px] p-[14px] sm:p-[20px] shadow-[0px_294px_82px_0px_rgba(0,0,0,0.01),0px_188px_75px_0px_rgba(0,0,0,0.06),0px_106px_63px_0px_rgba(0,0,0,0.21),0px_47px_47px_0px_rgba(0,0,0,0.35),0px_12px_26px_0px_rgba(0,0,0,0.4)] flex flex-col gap-[16px] sm:gap-[24px] items-center w-full sm:w-[500px] max-w-full">
           {/* Header Row: DONE + Checkmark Icon */}
-          <div className="flex items-center justify-center gap-[16px] p-[8px]">
-            <h1 className="font-manrope font-bold text-[56px] md:text-[64px] text-white leading-[1.32] tracking-tight">
+          <div className="flex items-center justify-center gap-[12px] sm:gap-[16px] p-[8px]">
+            <h1 className="font-manrope font-bold text-[44px] sm:text-[56px] md:text-[64px] text-white leading-[1.32] tracking-tight">
               DONE
             </h1>
             <div className="size-[48px] md:size-[56px] shrink-0">
@@ -36,10 +36,10 @@ export const SuccessPage: React.FC = () => {
           </div>
 
           {/* Inner Black Card */}
-          <div className="bg-black rounded-[8px] p-[24px] w-full flex flex-col gap-[35px] items-center">
+          <div className="bg-black rounded-[8px] p-[16px] sm:p-[24px] w-full flex flex-col gap-[24px] sm:gap-[35px] items-center">
             {/* Bull Graphic & Text */}
             <div className="flex flex-col gap-[32px] items-center w-full">
-              <div className="w-[280px] md:w-[320px] h-auto shrink-0 animate-pulse-slow">
+              <div className="w-full max-w-[240px] sm:max-w-[280px] md:max-w-[320px] h-auto shrink-0 animate-pulse-slow">
                 <img src={bullVectorSvg} alt="Legend Bull illustration" className="w-full h-auto object-contain" />
               </div>
 

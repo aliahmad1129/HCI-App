@@ -20,7 +20,7 @@ export const Checkbox: React.FC<CheckboxProps> = ({
   return (
     <label
       htmlFor={checkboxId}
-      className={`inline-flex items-center gap-[8px] cursor-pointer select-none group ${className}`}
+      className={`inline-flex min-h-[36px] items-center gap-[8px] cursor-pointer select-none group ${className}`}
     >
       <div className="relative flex items-center justify-center">
         <input
