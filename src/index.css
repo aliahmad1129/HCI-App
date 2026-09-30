@@ -1,0 +1,47 @@
+@import "tailwindcss";
+
+@theme {
+  --font-manrope: 'Manrope', sans-serif;
+  --font-ibm: 'IBM Plex Mono', monospace;
+  --font-geist: 'Geist Mono', monospace;
+  --font-syne: 'Syne', sans-serif;
+  --color-brand-red: #d11c1c;
+}
+
+@layer utilities {
+  .font-ibm {
+    font-family: 'IBM Plex Mono', monospace;
+  }
+  .font-geist {
+    font-family: 'Geist Mono', monospace;
+  }
+  .font-syne {
+    font-family: 'Syne', sans-serif;
+  }
+  .font-manrope {
+    font-family: 'Manrope', sans-serif;
+  }
+}
+
+/* Background texture overlay */
+.bg-hci-pattern {
+  background-color: #0c0c0c;
+  background-image: radial-gradient(circle at center, rgba(24, 24, 24, 0.8) 0%, rgba(10, 10, 10, 0.95) 100%);
+  background-size: cover;
+  background-position: center;
+}
+
+/* Custom subtle scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.2);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(209, 28, 28, 0.5);
+}
