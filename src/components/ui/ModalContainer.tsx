@@ -18,7 +18,7 @@ export const ModalContainer: React.FC<ModalContainerProps> = ({
 
   return (
     <div
-      className={`bg-[#181818] border border-[rgba(255,255,255,0.08)] rounded-[12px] p-[14px] sm:p-[20px] shadow-[0px_294px_82px_0px_rgba(0,0,0,0.01),0px_188px_75px_0px_rgba(0,0,0,0.06),0px_106px_63px_0px_rgba(0,0,0,0.21),0px_47px_47px_0px_rgba(0,0,0,0.35),0px_12px_26px_0px_rgba(0,0,0,0.4)] flex flex-col gap-[16px] sm:gap-[24px] max-w-full ${responsiveWidthClass} mx-auto transition-all duration-300 animate-fadeIn relative z-10`}
+      className={`bg-[#181818] border border-[rgba(255,255,255,0.08)] rounded-[12px] p-[14px] sm:p-[20px] shadow-[0px_294px_82px_0px_rgba(0,0,0,0.01),0px_188px_75px_0px_rgba(0,0,0,0.06),0px_106px_63px_0px_rgba(0,0,0,0.21),0px_47px_47px_0px_rgba(0,0,0,0.35),0px_12px_26px_0px_rgba(0,0,0,0.4)] flex flex-col gap-[16px] sm:gap-[24px] max-w-full sm:max-w-[600px] ${responsiveWidthClass} mx-auto transition-all duration-300 animate-fadeIn relative z-10`}
     >
       {/* Top Header Row */}
       <div className="flex items-start sm:items-center justify-between gap-[8px] w-full">
